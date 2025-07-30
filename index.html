@@ -9,7 +9,9 @@
 		<!-- Figtree Font from Google Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@100;300;400;600&display=swap"
 			rel="stylesheet" />
-		<link rel="stylesheet" href="./styling/main.css" />
+
+		<link rel="stylesheet" href="./src/styles/main.css" />
+		<link rel="stylesheet" href="./src/styles/responsiveness.css" />
 
 		<script type="application/ld+json">
     </script>
@@ -41,104 +43,151 @@
         alt="Under Construction"
       />
     </div> -->
-		<!-- Navigation -->
-		<header class="header">
-			<nav class="navbar">
-				<div class="logo">
-					<a href="#hero">
-						<img src="./assets/logo/navbarLogo.svg" alt="Logo" />
-					</a>
-				</div>
-				<div class="burger-menu-container" aria-label="Toggle navigation">
-					<input type="checkbox" id="checkbox" class="burger-menu" />
-					<label for="checkbox" class="toggle">
-						<div class="bar bar--top"></div>
-						<div class="bar bar--middle"></div>
-						<div class="bar bar--bottom"></div>
-					</label>
-				</div>
-				<div class="nav-links">
-					<a href="#about">About</a>
-					<a href="#services">Services</a>
-					<a href="#creations">Creations</a>
-					<a href="#contact">Contact</a>
-				</div>
-			</nav>
-		</header>
 
 		<div class="content">
 			<!-- Hero Section -->
-			<section id="hero" class="hero section">
-
+			<section id="hero" class="hero section visible">
+				<div class="hero-bg">
+					<img src="./src/media/landing/landingBackground.svg" class="hero-bg-img"
+						alt="Villa 39 Background" />
+					<img src="./src/media/landing/landingOverlay.svg" class="hero-bg-overlay" alt="Overlay" />
+					<div class="hero-center-content">
+						<img src="./src/media/landing/landingLogo.svg" alt="Villa 39 Logo" class="hero-logo-img" />
+						<nav class="hero-nav">
+							<a href="#contact">CONTACT</a>
+							<a href="#about">ABOUT</a>
+							<a href="#creations">CREATIONS</a>
+							<a href="#services">SERVICES</a>
+						</nav>
+					</div>
+				</div>
 			</section>
 
 			<!-- About -->
-			<section id="about" class="about section">
+			<section id="about" class="about section visible">
 				<div class="section-heading">
-					<h2>About</h2>
+					<h2>ABOUT</h2>
 				</div>
-
-				<div class="section-content">
-
+				<div class="section-content about-content">
+					<div class="about-text">
+						<h3>Inhouse Goldsmith</h3>
+						<p>
+							Hi all, I am Jean. I have been in the jewelry industry for 20 years. I started in sales at
+							the
+							local jewelry store and was fascinated by what the goldsmith in the store was doing. I fell
+							in
+							love
+							with the process of creating jewelry and decided to go and study goldsmithing. After
+							qualifying
+							I
+							made the decision to work for myself. To say I was petrified is an understatement! Hard work
+							and
+							sticking with it helped fuel the passion I have for the industry, and 7 years later I can
+							truly
+							say I am happy. I love what I do, and I love my customers. Jewelry is a very personal
+							purchase
+							and I strive to make every piece worthy. There is a piece of my soul in every piece I
+							create.
+						</p>
+					</div>
+					<div class="about-image">
+						<img src="./src/media/profile/jeanProfilePicture.png" alt="Jean Goldsmith" />
+					</div>
 				</div>
 			</section>
 
 			<!-- Services -->
-			<section id="services" class="services section">
+			<section id="services" class="services section visible">
 				<div class="section-heading">
-					<h2>Services</h2>
+					<h2>SERVICES</h2>
 				</div>
-				<div class="section-content">
-
+				<div class="services-bar"></div>
+				<div class="section-content services-gallery">
+					<div class="service-item">
+						<img src="./src/media/jewelry/creation1.jpg" alt="Design" />
+						<span class="vertical-label">Design</span>
+					</div>
+					<div class="service-item">
+						<img src="./src/media/jewelry/creation2.jpg" alt="Manufacture" />
+						<span class="vertical-label">Manufacture</span>
+					</div>
+					<div class="service-item">
+						<img src="./src/media/jewelry/creation3.jpg" alt="Re-purpose" />
+						<span class="vertical-label">Re-purpose</span>
+					</div>
+					<div class="service-item">
+						<img src="./src/media/jewelry/creation4.jpg" alt="Repair" />
+						<span class="vertical-label">Repair</span>
+					</div>
+					<div class="service-item">
+						<img src="./src/media/jewelry/creation5.jpg" alt="Resize" />
+						<span class="vertical-label">Resize</span>
+					</div>
+					<div class="service-item">
+						<img src="./src/media/jewelry/creation6.jpg" alt="Engrave" />
+						<span class="vertical-label">Engrave</span>
+					</div>
 				</div>
 			</section>
 
 			<!-- Creations -->
-			<section id="creations" class="creations section">
+			<section id="creations" class="creations section visible">
 				<div class="section-heading">
-					<h2>Creations</h2>
+					<h2>CREATIONS</h2>
 				</div>
-				<div class="section-content">
-
+				<div class="section-content creations-gallery">
+					<div class="creation-item"><img src="./src/media/jewelry/creation1.jpg" alt="Creation 1" /></div>
+					<div class="creation-item"><img src="./src/media/jewelry/creation2.jpg" alt="Creation 2" /></div>
+					<div class="creation-item"><img src="./src/media/jewelry/creation3.jpg" alt="Creation 3" /></div>
+					<div class="creation-item"><img src="./src/media/jewelry/creation4.jpg" alt="Creation 4" /></div>
+					<div class="creation-item"><img src="./src/media/jewelry/creation5.jpg" alt="Creation 5" /></div>
+					<div class="creation-item"><img src="./src/media/jewelry/creation6.jpg" alt="Creation 6" /></div>
 				</div>
 			</section>
 
 			<!-- Contact -->
-			<section id="contact" class="contact section">
+			<section id="contact" class="contact section visible">
 				<div class="section-heading">
-					<h2>Contact</h2>
+					<h2>CONTACT</h2>
 				</div>
-				<div class="section-content">
+				<div class="section-content contact-content">
 					<div class="left-contact-section">
-
+						<img src="./src/media/contactOverlay.svg" alt="Leaves" />
+						<div class="contact-details">
+							<div>
+								<span>Contact</span><br>
+								Phone: 084 879 3784
+							</div>
+							<div>
+								Email: email address
+							</div>
+						</div>
 					</div>
-
 					<div class="right-contact-section">
-						<h3>Get in touch</h3>
 						<form id="contact-form">
 							<div class="input-container">
-								<input type="text" id="name" name="name" placeholder="Name" required />
-								<label for="name">Name*</label>
+								<input type="text" id="name" name="name" placeholder=" " required />
+								<label for="name">Name & Surname</label>
 							</div>
 							<div class="input-container">
-								<input type="email" id="email" name="email" placeholder="Email" required />
-								<label for="email">Email*</label>
+								<input type="tel" id="number" name="number" placeholder=" " required />
+								<label for="number">Contact Number</label>
 							</div>
 							<div class="input-container">
-								<input type="tel" id="number" name="number" placeholder="Number" />
-								<label for="number">Number</label>
+								<input type="email" id="email" name="email" placeholder=" " required />
+								<label for="email">Email Address</label>
 							</div>
 							<div class="input-container">
-								<textarea id="message" name="message" placeholder="Message" required></textarea>
-								<label for="message">Message*</label>
+								<textarea id="message" name="message" placeholder=" " required></textarea>
+								<label for="message">Input Label</label>
 							</div>
-							<button type="submit">Submit</button>
+							<button type="submit">SEND</button>
 						</form>
 					</div>
 				</div>
 			</section>
 		</div>
-
+		<!-- FOOTER -->
 		<footer>
 			<div class="footer-logo">
 				<a href="#hero">
@@ -148,6 +197,7 @@
 			<div class="footer-social-links">
 				<img src="./src/media/socialIcons/facebook.svg" alt="Facebook" />
 				<img src="./src/media/socialIcons/linkedIn.svg" alt="LinkedIn" />
+				<img src="./src/media/socialIcons/whatsApp.svg" alt="WhatsApp" />
 			</div>
 			<div class="footer-copy">
 				<h1>
