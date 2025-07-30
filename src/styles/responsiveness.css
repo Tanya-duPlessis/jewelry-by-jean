@@ -1,0 +1,203 @@
+/* Responsive layout for Villa 39 site */
+
+/* General scaling */
+body,
+html {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Hero Section */
+.hero-bg {
+    min-height: 320px;
+}
+
+.hero-logo img {
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+}
+
+.hero-nav {
+    flex-wrap: wrap;
+    gap: 32px;
+    font-size: 1.1rem;
+}
+
+/* About Section */
+.about-content {
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 48px 0;
+}
+
+.about-text {
+    min-width: 260px;
+    max-width: 500px;
+    font-size: 1.1rem;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+}
+
+/* Services Section */
+.services-gallery {
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 32px 0;
+}
+
+.service-item {
+    width: 180px;
+    min-width: 140px;
+}
+
+.service-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.service-item span {
+    font-size: 1.05rem;
+    margin-top: 8px;
+}
+
+/* Creations Section */
+.creations-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-auto-rows: 180px;
+    gap: 32px 24px;
+    padding: 48px 16px;
+}
+
+.creation-item img {
+    max-width: 320px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contact Section */
+.contact-content {
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 48px 0;
+}
+
+.left-contact-section img {
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+}
+
+.right-contact-section {
+    min-width: 260px;
+    max-width: 500px;
+}
+
+/* Footer */
+footer {
+    flex-wrap: wrap;
+    padding: 24px 32px;
+    gap: 24px;
+}
+
+.footer-logo img {
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.footer-social-links img {
+    max-width: 28px;
+    width: 100%;
+    height: auto;
+}
+
+/* Typography scaling */
+.section-heading h2,
+.hero-nav a,
+.about-text h3,
+.service-item span,
+.footer-copy h1,
+button[type="submit"] {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Mobile styles */
+@media (max-width: 900px) {
+    .content {
+        padding: 0 8px;
+    }
+
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .services-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .creations-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 160px;
+        padding: 32px 4px;
+    }
+
+    .footer-copy h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero-logo img,
+    .about-image img,
+    .left-contact-section img {
+        max-width: 220px;
+    }
+
+    .creations-gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 140px;
+        gap: 18px 0;
+        padding: 18px 2px;
+    }
+
+    .service-item {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .services-gallery {
+        gap: 12px;
+        padding: 18px 0;
+    }
+
+    .footer-logo img,
+    .footer-social-links img {
+        max-width: 32px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 4px;
+    }
+}

@@ -1,0 +1,21 @@
+.maintenance {
+    text-align: center;
+    height: 100%;
+    gap: 50px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    transform: translateY(50px);
+    background-color: #2D363F;
+    padding: 20px;
+}
+
+.maintenance img {
+    width: 85%;
+    max-width: 517px;
+    height: auto;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
