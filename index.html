@@ -2,40 +2,170 @@
 <html lang="en">
 
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Jewelry by Jean</title>
-		<link rel="stylesheet" href="styles.css">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Villa 39</title>
+		<meta name="description" content="" />
+		<!-- Figtree Font from Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@100;300;400;600&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="./styling/main.css" />
+
+		<script type="application/ld+json">
+    </script>
 	</head>
+	<div class="overlay">
+		<div class="overlayDoor"></div>
+		<div class="overlayContent">
+			<div class="loader">
+				<div class="inner"></div>
+			</div>
+		</div>
+	</div>
 
 	<body>
-		<header>
-			<h1>Jewelry by Jean</h1>
-			<nav>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Shop</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
+		<!-- <div class="maintenance">
+      <img
+        src="./assets/logo/heroLogo.png"
+        srcset="
+          ./assets/logo/heroLogo.png    1x,
+          ./assets/logo/heroLogo@2x.png 2x,
+          ./assets/logo/heroLogo@3x.png 3x
+        "
+        alt="Logo"
+        loading="lazy"
+      />
+      <img
+        class="contruction-image"
+        src="./assets/images/maintenance/maintenance.jpg"
+        alt="Under Construction"
+      />
+    </div> -->
+		<!-- Navigation -->
+		<header class="header">
+			<nav class="navbar">
+				<div class="logo">
+					<a href="#hero">
+						<img src="./assets/logo/navbarLogo.svg" alt="Logo" />
+					</a>
+				</div>
+				<div class="burger-menu-container" aria-label="Toggle navigation">
+					<input type="checkbox" id="checkbox" class="burger-menu" />
+					<label for="checkbox" class="toggle">
+						<div class="bar bar--top"></div>
+						<div class="bar bar--middle"></div>
+						<div class="bar bar--bottom"></div>
+					</label>
+				</div>
+				<div class="nav-links">
+					<a href="#about">About</a>
+					<a href="#services">Services</a>
+					<a href="#creations">Creations</a>
+					<a href="#contact">Contact</a>
+				</div>
 			</nav>
 		</header>
-		<main>
-			<section>
-				<h2>Welcome!</h2>
-				<p>Discover unique handmade jewelry crafted with love.</p>
+
+		<div class="content">
+			<!-- Hero Section -->
+			<section id="hero" class="hero section">
+
 			</section>
-		</main>
+
+			<!-- About -->
+			<section id="about" class="about section">
+				<div class="section-heading">
+					<h2>About</h2>
+				</div>
+
+				<div class="section-content">
+
+				</div>
+			</section>
+
+			<!-- Services -->
+			<section id="services" class="services section">
+				<div class="section-heading">
+					<h2>Services</h2>
+				</div>
+				<div class="section-content">
+
+				</div>
+			</section>
+
+			<!-- Creations -->
+			<section id="creations" class="creations section">
+				<div class="section-heading">
+					<h2>Creations</h2>
+				</div>
+				<div class="section-content">
+
+				</div>
+			</section>
+
+			<!-- Contact -->
+			<section id="contact" class="contact section">
+				<div class="section-heading">
+					<h2>Contact</h2>
+				</div>
+				<div class="section-content">
+					<div class="left-contact-section">
+
+					</div>
+
+					<div class="right-contact-section">
+						<h3>Get in touch</h3>
+						<form id="contact-form">
+							<div class="input-container">
+								<input type="text" id="name" name="name" placeholder="Name" required />
+								<label for="name">Name*</label>
+							</div>
+							<div class="input-container">
+								<input type="email" id="email" name="email" placeholder="Email" required />
+								<label for="email">Email*</label>
+							</div>
+							<div class="input-container">
+								<input type="tel" id="number" name="number" placeholder="Number" />
+								<label for="number">Number</label>
+							</div>
+							<div class="input-container">
+								<textarea id="message" name="message" placeholder="Message" required></textarea>
+								<label for="message">Message*</label>
+							</div>
+							<button type="submit">Submit</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+
 		<footer>
-			<p>&copy; 2025 Jewelry by Jean. All rights reserved.</p>
-			<p>Follow us on social media:</p>
-			<ul>
-				<li><a href="#">Facebook</a></li>
-				<li><a href="#">Instagram</a></li>
-				<li><a href="#">Pinterest</a></li>
-			</ul>
+			<div class="footer-logo">
+				<a href="#hero">
+					<img src="./src/media/logoSmall.svg" alt="Logo" />
+				</a>
+			</div>
+			<div class="footer-social-links">
+				<img src="./src/media/socialIcons/facebook.svg" alt="Facebook" />
+				<img src="./src/media/socialIcons/linkedIn.svg" alt="LinkedIn" />
+			</div>
+			<div class="footer-copy">
+				<h1>
+					Copyright © 2024 Villa 39<br />
+					All Rights Reserved
+				</h1>
+			</div>
 		</footer>
-		<script src="/src/scripts/main.js"></script>
+		<script>
+			$(document).ready(function () {
+				$(".overlay, body").addClass("loaded");
+				$("body").css({ overflow: "hidden" });
+				setTimeout(function () {
+					$(".overlay").css({ display: "none" });
+					$("body").css({ overflow: "auto" });
+				}, 1000);
+			});
+		</script>
 	</body>
 
 </html>
